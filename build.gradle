@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.linkedin.transport:transportable-udfs-plugin:0.0.83"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('com.google.guava:guava:19.0')
+    compile('org.apache.commons:commons-lang3:3.7')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+apply plugin: "java"
+apply plugin: "com.linkedin.transport.plugin"
+
+repositories {
+    mavenCentral()
+}
