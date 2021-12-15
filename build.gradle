@@ -15,7 +15,7 @@ plugins {
 apply plugin: "java"
 apply plugin: "com.linkedin.transport.plugin"
 
-group 'com.nexr.udf'
+group 'com.nexr.transport.udf'
 version '1.0-SNAPSHOT'
 
 repositories {
